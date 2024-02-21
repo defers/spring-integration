@@ -1,0 +1,9 @@
+spring:
+  activemq:
+    broker-url: ${AMQ_ADDRESS:tcp://localhost:61616}
+    non-blocking-redelivery: true
+    user: ${AMQ_USER:admin}
+    password: ${AMQ_PASSWORD:admin}
+  jms:
+    listener:
+      max-concurrency: ${NUMBER_OF_CONSUMERS:2}
